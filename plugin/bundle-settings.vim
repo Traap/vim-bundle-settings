@@ -2,6 +2,7 @@
 if exists('g:loaded_bundle_settings')
   finish
 endif
+let g:loaded_bundle_settings=1
 " -------------------------------------------------------------------------- }}}
 " {{{ Leader
 let g:mapleader = ","
