@@ -16,6 +16,7 @@ filetype plugin indent on
 " {{{ Alphabetical listing of things I set.
 set autowrite
 set cmdheight=1
+set clipboard+=unnamedplus
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
 set encoding=UTF-8
