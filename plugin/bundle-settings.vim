@@ -61,6 +61,12 @@ set showmatch
 set showmode
 set sidescroll=1
 set sidescrolloff=10
+if has("patch-8.1.1564")
+  " Merge signcolumn and number column
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 set smartcase
 set softtabstop=2
 set splitbelow splitright
