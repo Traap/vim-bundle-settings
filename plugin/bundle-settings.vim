@@ -27,7 +27,7 @@ filetype plugin indent on
 " Some 'things' are defaults.  I document them as reminders to myself.
 
 set autowrite
-set cmdheight=1
+set cmdheight=2
 set clipboard+=unnamedplus
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
@@ -50,7 +50,7 @@ set noswapfile
 set notimeout
 set novisualbell
 set number
-set numberwidth=1
+set numberwidth=3
 set path+=**
 set printoptions=paper:A4,duplex:off,collate:n,syntax:y,number:y,top:5pc,right:2pc,bottom:5pc,left:2pc
 set shiftround
@@ -62,11 +62,10 @@ set showmode
 set sidescroll=1
 set sidescrolloff=10
 if has("patch-8.1.1564")
-  " Merge signcolumn and number column
-  set signcolumn=number
+    set signcolumn=number
 else
-  set signcolumn=yes
-endif
+    set signcolumn=yes
+ endif
 set smartcase
 set softtabstop=2
 set splitbelow splitright
@@ -95,11 +94,11 @@ endif
 " -------------------------------------------------------------------------- }}}
 " {{{ neovim
 
-if has('nvim')
-  tnoremap <Esc> <C-\><C-n>
-  set mouse=nvi
-  behave xterm
-endif
+" if has('nvim')
+"   tnoremap <Esc> <C-\><C-n>
+"   set mouse=nvi
+"   behave xterm
+" endif
 
 " -------------------------------------------------------------------------- }}}
 " {{{ The Silver Search through ack.vim
