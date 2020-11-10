@@ -64,8 +64,8 @@ set sidescrolloff=10
 if has("patch-8.1.1564")
     set signcolumn=number
 else
-    set signcolumn=yes
- endif
+  set signcolumn=auto
+endif
 set smartcase
 set softtabstop=2
 set splitbelow splitright
