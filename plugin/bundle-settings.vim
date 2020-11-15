@@ -27,7 +27,7 @@ filetype plugin indent on
 " Some 'things' are defaults.  I document them as reminders to myself.
 
 set autowrite
-set cmdheight=2
+set cmdheight=1
 set clipboard+=unnamedplus
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
