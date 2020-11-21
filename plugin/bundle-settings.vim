@@ -74,8 +74,6 @@ set tabstop=2
 set textwidth=80
 set title
 set ttimeoutlen=10
-set ttyfast
-set t_vb=
 set undodir=~/.vim/undodir
 set undofile
 set virtualedit+=block
