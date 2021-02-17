@@ -13,7 +13,7 @@ let g:loaded_bundle_settings=1
 
 let g:mapleader = ","
 let maplocalleader = ","
-set tm=750                                   " Leader key timeout.
+set timeoutlen=200                                   " Leader key timeout.
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Filetype and plugin defaults.
@@ -26,9 +26,10 @@ filetype plugin indent on
 
 " Some 'things' are defaults.  I document them as reminders to myself.
 
+behave xterm
 set autowrite
-set cmdheight=1
 set clipboard+=unnamedplus
+set cmdheight=1
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
 set encoding=UTF-8
@@ -43,6 +44,7 @@ set lazyredraw
 set linebreak
 set matchtime=3
 set modelines=0
+set mouse=nvi
 set nobackup
 set nocompatible
 set norelativenumber
@@ -61,11 +63,6 @@ set showmatch
 set showmode
 set sidescroll=1
 set sidescrolloff=10
-if has("patch-8.1.1564")
-    set signcolumn=number
-else
-  set signcolumn=auto
-endif
 set smartcase
 set softtabstop=2
 set splitbelow splitright
@@ -82,6 +79,15 @@ set wrap
 syntax on
 
 " -------------------------------------------------------------------------- }}}
+" {{{ Color support.
+
+if has(“termguicolors”)
+  set termguicolors
+endif
+
+colorscheme base16-chalk
+
+" -------------------------------------------------------------------------- }}}
 " {{{ Show trailing whitespaces
 
 set nolist                                    " Show trailing whitespaces
@@ -90,13 +96,18 @@ if &listchars ==# 'eol:$'                     " But only interesting whitespace
 endif
 
 " -------------------------------------------------------------------------- }}}
-" {{{ neovim
+" {{{ vim 8+ and neovim
 
-" if has('nvim')
-"   tnoremap <Esc> <C-\><C-n>
-"   set mouse=nvi
-"   behave xterm
-" endif
+" Note: 2021-02-16 move section to bundle-vim-terminal.vim
+if has("patch-8.1.1564")
+  set signcolumn=yes
+else
+  set signcolumn=yes
+endif
+
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+endif
 
 " -------------------------------------------------------------------------- }}}
 " {{{ The Silver Search through ack.vim
