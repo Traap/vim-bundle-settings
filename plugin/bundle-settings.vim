@@ -81,8 +81,12 @@ syntax on
 " -------------------------------------------------------------------------- }}}
 " {{{ Color support.
 
-if has(“termguicolors”)
+if has('termguicolors')
   set termguicolors
+endif
+
+if $TERM ==# "xterm"
+  set background=dark
 endif
 
 colorscheme base16-chalk
