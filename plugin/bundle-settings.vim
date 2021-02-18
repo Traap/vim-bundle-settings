@@ -51,6 +51,7 @@ set norelativenumber
 set noswapfile
 set notimeout
 set novisualbell
+set novisualbell
 set number
 set numberwidth=3
 set path+=**
@@ -74,22 +75,21 @@ set ttimeoutlen=10
 set undodir=~/.vim/undodir
 set undofile
 set virtualedit+=block
-set visualbell
 set wrap
 syntax on
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Color support.
 
-if has('termguicolors')
-  set termguicolors
-endif
+" if has('termguicolors')
+"   set termguicolors
+" endif
 
-if $TERM ==# "xterm"
-  set background=dark
-endif
+" if $TERM ==# "xterm"
+"   set background=dark
+" endif
 
-colorscheme base16-chalk
+" colorscheme base16-chalk
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Show trailing whitespaces
