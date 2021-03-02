@@ -26,14 +26,7 @@ filetype plugin indent on
 
 " Some 'things' are defaults.  I document them as reminders to myself.
 
-if has('linux')
-  behave xterm
-else
-  behave mswin
-endif
-
 set autowrite
-set belloff=all
 set clipboard+=unnamedplus
 set cmdheight=1
 set colorcolumn=+1
