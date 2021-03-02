@@ -26,8 +26,14 @@ filetype plugin indent on
 
 " Some 'things' are defaults.  I document them as reminders to myself.
 
-behave xterm
+if has('linux')
+  behave xterm
+else
+  behave mswin
+endif
+
 set autowrite
+set belloff=all
 set clipboard+=unnamedplus
 set cmdheight=1
 set colorcolumn=+1
@@ -50,7 +56,6 @@ set nocompatible
 set norelativenumber
 set noswapfile
 set notimeout
-set novisualbell
 set novisualbell
 set number
 set numberwidth=3
