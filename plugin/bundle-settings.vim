@@ -54,6 +54,7 @@ set number
 set numberwidth=3
 set path+=**
 set printoptions=paper:A4,duplex:off,collate:n,syntax:y,number:y,top:5pc,right:2pc,bottom:5pc,left:2pc
+set pyx=3
 set shiftround
 set shiftwidth=2
 set showbreak=↪
