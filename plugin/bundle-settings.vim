@@ -138,3 +138,25 @@ command! -bang WQ wq<bang>
 command! -bang Wqa wqa<bang>
 
 " -------------------------------------------------------------------------- }}}
+" {{{ Windoz Subsystem for Linux (WSL) clipboard.
+
+" xsel is a Power Shell script located in my dotfiles repository.
+if has('nvim')
+  let g:man_hardwrap=1
+  if g:os_wsl
+    let g:clipboard = {
+          \   'name': 'myClipboard',
+          \   'copy': {
+          \      '+': 'xsel --nodetach -i -b',
+          \      '*': 'xsel --nodetach -i -b',
+          \    },
+          \   'paste': {
+          \      '+': 'xsel -o -b',
+          \      '*': 'xsel -o -b',
+          \   },
+          \   'cache_enabled': 1,
+          \ }
+  endif
+endif
+
+" -------------------------------------------------------------------------- }}}
