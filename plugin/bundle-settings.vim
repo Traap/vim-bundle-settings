@@ -28,12 +28,9 @@ filetype plugin indent on
 
 set autowrite
 set clipboard+=unnamedplus
-set cmdheight=1
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
-set encoding=UTF-8
 set expandtab
-set fileformats=unix
 set foldmethod=marker
 set formatoptions=qrn1tj
 set hlsearch
@@ -58,9 +55,7 @@ set pyx=3
 set shiftround
 set shiftwidth=2
 set showbreak=↪
-set showcmd
 set showmatch
-set showmode
 set sidescroll=1
 set sidescrolloff=10
 set smartcase
@@ -71,24 +66,19 @@ set tabstop=2
 set textwidth=80
 set title
 set ttimeoutlen=10
-set undodir=~/.vim/undodir
+if has('nvim')
+  set undodir=~/.vim/undodir-nvim
+  set signcolumn=auto
+else
+  set undodir=~/.vim/undodir
+  if has("patch-8.1.1564")
+    set signcolumn=auto
+  endif 
+endif
 set undofile
 set virtualedit+=block
 set wrap
 syntax on
-
-" -------------------------------------------------------------------------- }}}
-" {{{ Color support.
-
-" if has('termguicolors')
-"   set termguicolors
-" endif
-
-" if $TERM ==# "xterm"
-"   set background=dark
-" endif
-
-" colorscheme base16-chalk
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Show trailing whitespaces
@@ -106,10 +96,6 @@ if has("patch-8.1.1564")
   set signcolumn=yes
 else
   set signcolumn=yes
-endif
-
-if has('nvim')
-  tnoremap <Esc> <C-\><C-n>
 endif
 
 " -------------------------------------------------------------------------- }}}
