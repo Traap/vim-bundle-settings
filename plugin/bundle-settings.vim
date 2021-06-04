@@ -9,13 +9,6 @@ endif
 let g:loaded_bundle_settings=1
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Leader
-
-let g:mapleader = ","
-let maplocalleader = ","
-set timeoutlen=200                                   " Leader key timeout.
-
-" -------------------------------------------------------------------------- }}}
 " {{{ Filetype and plugin defaults.
 
 filetype on
