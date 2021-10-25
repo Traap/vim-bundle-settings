@@ -1,4 +1,4 @@
-" {{{ bundle-settings.vim 
+" {{{ bundle-settings.vim
 
 " Steve J. Losh @ https://bitbucket.org/sjl/dotfiles/src/default/vim/vimrc
 " has settings I borrowed.
@@ -24,6 +24,7 @@ set clipboard+=unnamedplus
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
 set expandtab
+set fillchars = 'fold: '
 set foldmethod=marker
 set formatoptions=qrn1tj
 set hlsearch
@@ -66,7 +67,7 @@ else
   set undodir=~/.vim/undodir
   if has("patch-8.1.1564")
     set signcolumn=auto
-  endif 
+  endif
 endif
 set undofile
 set virtualedit+=block
@@ -104,7 +105,7 @@ let g:most_minimal_folds_line_count = 1
 " -------------------------------------------------------------------------- }}}
 " {{{ Commands that I find useful.
 
-" It turns out I make the same typos Steve J. Losh does. 
+" It turns out I make the same typos Steve J. Losh does.
 command! -bang E e<bang>
 command! -bang Q q<bang>
 command! -bang W w<bang>
