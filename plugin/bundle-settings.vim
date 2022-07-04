@@ -24,7 +24,8 @@ set clipboard+=unnamedplus
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
 set expandtab
-" set fillchars = 'fold:-'
+" set fillchars='fold:-'
+set foldlevel=20
 set foldmethod=marker
 set formatoptions=qrn1tj
 set hlsearch
