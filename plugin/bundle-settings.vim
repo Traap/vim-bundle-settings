@@ -77,6 +77,8 @@ set virtualedit+=block
 set nowrap
 syntax on
 
+colorscheme abstract
+
 " -------------------------------------------------------------------------- }}}
 " {{{ Show trailing whitespaces
 
