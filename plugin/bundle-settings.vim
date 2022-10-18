@@ -23,6 +23,7 @@ set autowrite
 set clipboard+=unnamedplus
 set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
+set encoding=utf-8
 set expandtab
 " set fillchars='fold:-'
 set foldlevel=20
@@ -49,7 +50,8 @@ set printoptions=paper:A4,duplex:off,collate:n,syntax:y,number:y,top:5pc,right:2
 set pyx=3
 set shiftround
 set shiftwidth=2
-set showbreak=↪
+" Windows terminal is complaining???
+" set showbreak=↪
 set showmatch
 set sidescroll=1
 set sidescrolloff=10
@@ -72,16 +74,17 @@ else
 endif
 set undofile
 set virtualedit+=block
-set wrap
+set nowrap
 syntax on
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Show trailing whitespaces
 
 set nolist                                    " Show trailing whitespaces
-if &listchars ==# 'eol:$'                     " But only interesting whitespace
-  set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:-,nbsp:+
-endif
+" Windows terminal is complaining???
+" if &listchars ==# 'eol:$'                     " But only interesting whitespace
+"   set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:-,nbsp:+
+" endif
 
 " -------------------------------------------------------------------------- }}}
 " {{{ vim 8+ and neovim
