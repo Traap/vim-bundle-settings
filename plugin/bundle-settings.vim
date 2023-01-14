@@ -25,18 +25,17 @@ set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
 set encoding=utf-8
 set expandtab
-" set fillchars='fold:-'
+ set fillchars='fold: ,eob: '
 set foldlevel=20
 set foldmethod=marker
 set formatoptions=qrn1tj
 set hlsearch
 set ignorecase
 set laststatus=2
-set lazyredraw
 set linebreak
 set matchtime=3
 set modelines=0
-set mouse=nvi
+set mouse=a
 set nobackup
 set nocompatible
 set norelativenumber
@@ -63,15 +62,14 @@ set tabstop=2
 set textwidth=80
 set title
 set ttimeoutlen=10
-if has('nvim')
-  set undodir=~/.vim/undodir-nvim
-  set signcolumn=auto
+set undodir=~/.vim/undodir
+
+if has("patch-8.1.1564")
+  set signcolumn=yes
 else
-  set undodir=~/.vim/undodir
-  if has("patch-8.1.1564")
-    set signcolumn=auto
-  endif
+  set signcolumn=yes
 endif
+
 set undofile
 set virtualedit+=block
 set nowrap
@@ -87,16 +85,6 @@ set nolist                                    " Show trailing whitespaces
 " if &listchars ==# 'eol:$'                     " But only interesting whitespace
 "   set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:-,nbsp:+
 " endif
-
-" -------------------------------------------------------------------------- }}}
-" {{{ vim 8+ and neovim
-
-" Note: 2021-02-16 move section to bundle-vim-terminal.vim
-if has("patch-8.1.1564")
-  set signcolumn=yes
-else
-  set signcolumn=yes
-endif
 
 " -------------------------------------------------------------------------- }}}
 " {{{ The Silver Search through ack.vim
