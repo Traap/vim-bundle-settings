@@ -25,7 +25,7 @@ set colorcolumn=+1
 set complete=.,w,b,u,t,i,kspell
 set encoding=utf-8
 set expandtab
- set fillchars='fold: ,eob: '
+ " set fillchars='fold: ,eob: '
 set foldlevel=20
 set foldmethod=marker
 set formatoptions=qrn1tj
