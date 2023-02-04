@@ -117,7 +117,7 @@ command! -bang Wqa wqa<bang>
 " xsel is a Power Shell script located in my dotfiles repository.
 if has('nvim')
   let g:man_hardwrap=1
-  if g:os_wsl
+  if !empty(getenv('WSL_DISTRO_NAME'))
     let g:clipboard = {
           \   'name': 'myClipboard',
           \   'copy': {
