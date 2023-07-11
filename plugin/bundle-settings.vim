@@ -37,15 +37,14 @@ set modelines=0
 set mouse=a
 set nobackup
 set nocompatible
-set norelativenumber
 set noswapfile
 set notimeout
 set novisualbell
-set number
 set numberwidth=3
 set path+=**
 set printoptions=paper:A4,duplex:off,collate:n,syntax:y,number:y,top:5pc,right:2pc,bottom:5pc,left:2pc
 set pyx=3
+set relativenumber
 set shiftround
 set shiftwidth=2
 " Windows terminal is complaining???
